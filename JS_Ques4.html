@@ -1,0 +1,51 @@
+<!-- Ques.4: Create an HTML page with the sole purpose to show multiplication tables of 2 to 10 (row-wise)
+created by JavaScript. Initially, the page is blank. With help of setInterval function print a row
+every 5 seconds in different colors and increasing font size. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Question4_Harsh </title>
+    <script>
+            var i = 2;      //table of i
+            var size = 25; //font size
+            var ID = setInterval(
+                function(){
+                    //random values of rgb
+                    var r = Math.floor(Math.random() * 225); //(Math.random() * y) + x it's range = x to (y-1)
+                    var g = Math.floor(Math.random() * 225);
+                    var b = Math.floor(Math.random() * 225);
+                    console.log("x");
+                    //if(i<=10){  //counter 
+                        for(var j=1;j<=10;j++){
+                            document.getElementById("row" + i).innerHTML +=`${i*j} &emsp;`;   //&emsp tab space
+                            document.getElementById("row" + i).style.color = `rgb(${r},${g},${b})`;
+                            document.getElementById("row" + i).style.fontSize = size + "px";
+                        }
+                        i+=1;
+                        size+=3;
+                 //   }
+            }, 2000);
+             
+    function stopInterval(){
+       clearInterval(ID);
+    }
+   setTimeout(stopInterval,21000);
+    </script>
+    </head>
+    <body leftmargin="100">
+        <h1  align=center style="color: rgb(30, 7, 243); font-family: Impact;"> Changing Tables</h1>
+        <h2 align=center style="color: rgb(30, 7, 243); font-family: Impact;">From 2 to 10</h2>
+        <hr>
+        <p id="row1"></p> 
+        <p id="row2"></p> 
+        <p id="row3"></p> 
+        <p id="row4"></p> 
+        <p id="row5"></p> 
+        <p id="row6"></p> 
+        <p id="row7"></p> 
+        <p id="row8"></p> 
+        <p id="row9"></p>
+        <p id="row10"></p> 
+    </body>
+</html>

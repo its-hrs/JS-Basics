@@ -1,0 +1,90 @@
+<!-- Ques.4: Create an HTML page with a paragraph written on it and under which 9 buttons are placed in a
+3X3 grid. The first row is for buttons labeled with colors names Red, Green, and Blue, the
+second row with numbers 10, 20, 30, and the third row with different font names. Click event
+of each of the buttons should make the appropriate change in the style of paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19011 Event Handling</title>
+    <style>
+        .container input{
+            margin: 15px;
+            padding: 5px;
+            border-radius: 5px;
+            width:115px;
+            font-family:Verdana;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 9px rgb(26, 24, 24);
+        }
+
+
+        .container{
+            background-color: darkgray;
+            border: 2px solid black;
+            display:inline-block;
+            border-radius:10px;
+            margin-left: 80vh;
+            margin-top: 20vh;
+            box-shadow: 3px 4px 3px 5px black;
+            height: 30vh;
+        }
+
+        input:hover {background-color:rgb(200, 221, 9)}
+
+    input:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+    </style>
+
+    <script type="text/javascript">
+		function change_color(colr){
+			document.getElementById('p1').style.color=`${colr}`;
+            var flag=1;
+		}
+
+		function change_size(size){
+			document.getElementById('p1').style.fontSize=`${size}`;
+            var flag=1;
+		}
+		
+
+        function change_font(fnt){
+            document.getElementById('p1').style.fontFamily=`${fnt}`;
+            var flag=1;
+        }
+      
+        function previous(){
+            if (flag!=1){
+                document.getElementById('p1').style='none';
+             }
+        }
+	</script>
+
+</head>
+<body>
+    <p id="p1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rerum neque illo ea mollitia sapiente iste delectus veritatis magni, suscipit fugiat placeat temporibus optio repellat illum excepturi! Voluptate, neque sapiente!</p>
+
+    <div class="container">
+        <input type="button" value="Red" onclick="change_color('red')" onmouseover="change_color('red')" onmouseout="previous()">
+        <input type="button" value="Green" onclick= "change_color('green')" onmouseover="change_color('green')" onmouseout="previous()">
+        <input type="button" value="Blue"  onclick="change_color('blue')" onmouseover="change_color('blue')" onmouseout="previous()"><br>
+        <input type="button" value="10" onclick="change_size('10px')" onmouseover="change_size('10px')" onmouseout="previous()" >
+        <input type="button" value="20" onclick="change_size('20px')" onmouseover="change_size('20px')" onmouseout="previous()">
+        <input type="button" value="30" onclick="change_size('30px')" onmouseover="change_size('30px')" onmouseout="previous()"><br>
+        <input type="button" value="Monospace" onclick="change_font('Monospace')" onmouseover="change_font('Monospace')" onmouseout="previous()">
+        <input type="button" value="Arial" onclick="change_font('Arial')" onmouseover="change_font('Arial')" onmouseout="previous()">
+        <input type="button" value="Verdana" onclick="change_font('Verdana')" onmouseover="change_font('Verdana')" onmouseout="previous()">
+    
+    </div>
+    
+</body>
+</html>

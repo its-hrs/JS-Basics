@@ -1,0 +1,98 @@
+<!-- Write JavaScript code to find sum of series: 1/2+3/4+5/6+7/8+…..
+Take input for number of terms in series in an input textbox. (e.g. - number of terms in the example above is 4). Also write validation script to check whether the input field is not blank and that only numeric values are entered. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>19011 JSprac1</title>
+
+    <style>
+      * {
+        background-color: rgb(80, 133, 187);
+        font-family: "Segoe UI";
+      }
+
+      .container {
+        background-color: rgb(32, 90, 148);
+		width: 60%;
+        height: 70vh;
+		margin: auto;
+		text-align: center;
+		font-size: 1.2em;
+		padding: 70px;
+      }
+
+	  input{
+		border: none;
+        border-radius: 2px;
+        box-shadow: 1px 2px 4px 4px rgb(1, 2, 37);
+        padding: 10px;
+        margin: 20px;
+	  }
+
+      #b {
+        padding: 10px;
+        color: azure;
+        background-color: blue;
+        box-shadow: 3px 2px 3px 4px black;
+		margin: 20px;
+		border: none;
+		cursor: pointer;
+		border: none;
+		border-radius: 5px;
+      }
+
+	  ::placeholder{
+		  color:black;
+	  }
+
+      #b:hover {
+        background-color: green;
+      }
+	}
+    </style>
+
+    <script type="text/javascript">
+      function Series() {
+        var n = document.getElementById("num").value;
+        var sum = 0;
+
+          for (var i = 1, j = 1; j <= n; j++) {
+            sum += i / (i + 1);
+            document.getElementById("n1").innerHTML += i + "/" + (i + 1) + "+";
+            i += 2;
+		  }
+
+        document.getElementById("n1").innerHTML +=
+          "<br/> Sum of Series: " + sum + "<br/> <br/>";
+	  }
+	  
+	  function check(){
+		var n = document.getElementById("num").value;
+		if (n.length == 0) {
+          alert("Input field cannot be blank. Enter any value please!");
+        } 
+		else if (!n.match(/^[0-9]+$/)) {
+          alert("Only numeric values can be entered. Enter a number please!");
+		}
+		else{
+			Series();
+		}
+	}
+    
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sum of Series : 1/2+3/4+5/6+7/8+....</h1>
+      <br /><br />
+      Enter any number of terms of your choice for the sum of series:</br>
+	
+    <input type="text" placeholder="Enter any Number...." id="num" />
+      <button id="b" onclick="check()">Submit</button>
+      <p id="n1"></p>
+    </div>
+  </body>
+</html>
