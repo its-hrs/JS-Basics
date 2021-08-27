@@ -18,3 +18,17 @@ JS_Ques6 : Create a form that takes data about a pet. The form must be well desi
 the pet’s name, age, weight, type, and what it likes most. At the submission of this form create
 a Pet object in JavaScript filled with these values and log that object and equivalent JSON on
 the console.
+
+JS1: Create a paragraph and 2 buttons. On the click of the first button the colour of the paragraph should change and on the click of second button font size of the paragraph should change.
+
+JS2: Display an image on the webpage. If the mouse is clicked twice over the image, call a JavaScript function that prompts the user for his age. Do appropriate validation check(s). Display the age that user has entered if a number is entered, otherwise give appropriate alert message.
+
+JS_Ques3: Write a JS code to take a 1-digit numeric input from the user in a text box. As soon as the user enters a value in the textbox and releases the key, and if the entered value is not numeric, show an alert box telling that only numeric values can be entered and move the focus to the same text field. If the entered value is numeric, output the same value
+
+JS_Prac4: Implement a Static Password Protection.
+
+JS_Prac5: Create a link in a webpage. When the user hovers over the link, a paragraph should appear below the link telling what the link is about. When the user moves the mouse out of the the link the paragraph should disappear.
+
+JS_Prac6: Use setInterval() method of the window object to make an image move from one end of the screen to the other. When the image reaches at the far end of the screen, start the image again from the left end
+
+JS_Ques7: Create a digital clock using JavaScript which shows the current time
