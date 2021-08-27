@@ -1,0 +1,186 @@
+<!-- Create a form that takes data about a pet. The form must be well designed and should accept
+the pet’s name, age, weight, type, and what it likes most. At the submission of this form create
+a Pet object in JavaScript filled with these values and log that object and equivalent JSON on
+the console. -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>19011_PetForm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      h1{
+          font-family: Verdana;
+          text-shadow: 2px 1px blue;
+          text-align: center;
+      }
+
+      /* Add padding to containers */
+      .container {
+        padding: 16px;
+        background-color: white;
+        margin: 80px;
+        box-shadow: 2px 2px 3px 4px dodgerblue;
+      }
+
+      .container label{
+          font-size: 1.5em;
+      }
+
+      /* Full-width input fields */
+      input[type="text"],
+      input[type="number"] {
+        width: 90%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        background: #f1f1f1;
+        border: 1px solid black;
+        border-radius: 2px;
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus {
+        background-color: #ddd;
+        outline: none;
+        border: 2px solid dodgerblue;
+      }
+
+      /* Overwrite default styles of hr */
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      .container i{
+          background-color:dodgerblue;
+          padding: 16px;
+          border-radius: 5px;
+          color: whitesmoke
+      }
+
+      /* Set a style for the submit button */
+      .registerbtn {
+        background-color: dodgerblue;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        box-shadow: 0 9px #999;
+        border-radius: 10px;
+        font-size: 1.2em;
+      }
+
+      .registerbtn:hover {
+          background-color: rgb(11, 112, 212);
+        opacity: 1;
+      }
+
+      .registerbtn:active {
+         background-color: rgb(11, 112, 212);
+         box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+
+      /* Add a blue text color to links */
+      a {
+        color: dodgerblue;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <script type="text/JavaScript">
+      function pet_show() {
+          let pet = {
+              Name: document.getElementById('p1').value,
+              Age:  document.getElementById('p2').value,
+              Weight: document.getElementById('p3').value,
+              Type: document.getElementById('p4').value,
+              Favourite: document.getElementById('p5').value
+          };
+          console.log(pet);
+          console.log(JSON.stringify(pet));
+      }
+  </script>
+
+    <form>
+      <div class="container">
+        <h1>Pet Info. Registration</h1>
+        <p style="font-family: Verdana; text-align: center; font-weight: bold;">Please fill in this form to enter your pet details.</p>
+        <hr />
+
+        <label for="p_name"><b>Pet Name </label><br />
+        <i class="fas fa-dog fa-lg"></i>
+        <input
+          type="text"
+          placeholder="Enter your pet's name..."
+          name="p_name"
+          id="p1"
+          required
+        /><br />
+
+        <label for="p_age"><b>Pet Age </b></label><br />
+        <i class="fas fa-list-ol fa-lg"></i>
+        <input
+          type="number"
+          placeholder="Enter your pet's age..."
+          name="p_age"
+          id="p2"
+          max="100"
+          min="1"
+          required
+        /><br />
+
+        <label for="p_weight"><b>Pet Weight </label><br />
+        <i class="fas fa-weight fa-lg"></i>
+        <input
+          type="number"
+          placeholder="Enter your pet's weight..."
+          name="p_weight"
+          id="p3"
+          min="1"
+          max="100"
+          required
+        /><br />
+
+        <label for="p_type"><b>Pet Type </b></label><br /> 
+        <i class="fas fa-info-circle fa-lg"></i>
+        <input
+          type="text"
+          placeholder="Enter your pet's type..."
+          name="p_type"
+          id="p4"
+          required>
+          <br />
+        
+
+        <label for="p_like"><b>What's your pet like the most? </b></label><br />
+        <i class="fas fa-hand-holding-heart fa-lg"></i>
+        <input type="text" name="p_like" placeholder="Enter the text..." id="p5" required>
+        <hr />
+        <p>
+          By filling this form you agree to our <a href="#">Terms & Privacy</a>.
+        </p>
+
+        <button type="submit" class="registerbtn" onclick="pet_show()"><b>Submit</b></button>
+      </div>
+    </form>
+
+    <script src="https://kit.fontawesome.com/aba415448e.js" crossorigin="anonymous"></script>
+  </body>
+</html>
