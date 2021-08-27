@@ -1,0 +1,43 @@
+<!-- Write a JS code to take a 1-digit numeric input from the user in a text box. As soon as the user enters a value in the textbox and releases the key, and if the entered value is not numeric, show an alert box telling that only numeric values can be entered and move the focus to the same text field. If the entered value is numeric, output the same value. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>19011 JSques3</title>
+
+	<style>
+        *{
+            background-color: lightskyblue;
+            font-family: cursive;
+            font-size: 1.2em;
+        }
+
+        input{
+            background-color: rgb(153, 158, 163);
+            box-shadow: 10px 10px 4px 4px black;
+        }
+        ::placeholder{
+            color: black;
+        }
+    </style>
+	<script type="text/javascript">
+
+    function check(){
+        var n = document.getElementById("num").value;
+        if (!n.match(/^[0-9]+$/)){
+            alert("Only numeric values can be entered !!")
+        }
+        else{
+            document.getElementById("n1").innerHTML="</br>Entered number is:"+n;
+        }
+    }
+	</script>
+
+</head>
+<body>
+	<p>Enter any number: <input type="text" placeholder="Enter any Number...." id="num" onkeyup="check()"></p>
+		<p id="n1"></p>
+    </p>
+</body>
+</html>

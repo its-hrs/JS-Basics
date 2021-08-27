@@ -1,0 +1,49 @@
+<!--    Use setInterval() method of the window object 
+        to make an image move from one end of the screen to the other. 
+        When the image reaches at the far end of the screen, 
+        start the image again from the left end. -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>
+                    19011_QuesPrac6
+                </title>
+                <script language = "JavaScript">
+                    var pos = 0;
+                    function moveImage() {
+                        setInterval(
+                            function () {
+                                //var x = "Width: " +screen.width+ "px";
+                                if (screen.width>(pos+160)) {
+                                    document.getElementById("image").style.marginLeft=pos+"px";
+                                    pos=pos+4;
+                                }
+                                else if(screen.width<(pos+160)){
+                                    pos=0;
+                                    }
+                        }, 10);
+                    }
+                </script>
+
+                <style>
+                    h2{
+                        font-family: cursive;
+                        font-size: 2em;
+                        text-align: center;
+                        text-shadow: 2px 2px blue;
+                    }
+                </style>
+            </head>
+            <body>
+                <h2>Image Movement using SetInterval()</h2>
+                <p><b>Roll No. 19/19011</b></p>
+                <img src="/img/wimg2.png" alt="Harry-Potter" id="image" width="300px" style="margin-top: 10vh;">
+                <script type="text/JavaScript">
+                    moveImage();
+                </script>
+            </body>
+        </html>
+        
+        

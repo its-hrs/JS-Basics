@@ -1,0 +1,64 @@
+<!-- Create a link in a webpage. When the user hovers over the link, a paragraph should appear below the link telling what the link is about.When the user moves the mouse out of the the link the paragraph should disappear. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>19011_JSprac5</title>
+    <style>
+      * {
+        font-size: 1.6rem;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+        margin-top: 10vh;
+      }
+      a {
+        color:red;
+        text-decoration: none;
+      }
+
+      .fab{
+          color: red;
+      }
+
+      .cont {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 15vh;
+      }
+
+      #Para1 {
+        color: #177a0a;
+        font-size: 0.8em;
+        border: none;
+        box-shadow: 2px 1px 3px 4px khaki;
+      }
+    </style>
+    
+    <script type="text/JavaScript">
+      var flag = 1;
+      function hover() {
+          if (flag === 1) {
+              document.getElementById("Para1").style.visibility = "visible";
+              flag = 2;
+          }
+          else if (flag === 2) {
+              document.getElementById("Para1").style.visibility = "hidden";
+              flag = 1;
+          }
+      }
+    </script>
+  </head>
+  
+  <body>
+    Hover the mouse on <b>YouTube</b> below to see its Description
+    <div class="cont">
+      <a
+        href="https://www.youtube.com/" target="_blank" id="Link1" onmouseover="hover()" onmouseout="hover()" style="font-size: 2em;" >YouTube</a><i class="fab fa-youtube fa-2x"></i>
+      <p id="Para1" style="visibility: hidden">
+        This is a Link for YouTube <br /> Click to visit YouTube
+      </p>
+    </div>
+    <script src="https://kit.fontawesome.com/aba415448e.js" crossorigin="anonymous"></script>
+  </body>
+</html>

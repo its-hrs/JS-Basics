@@ -1,0 +1,91 @@
+<!-- Ques.4: Implement a Static Password Protection. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Static Password</title>
+    <style>
+        *{
+            font-family:monospace;
+            font-size: 1.4em;
+            color:black;
+            background-color: wheat;
+        }
+
+        #container{
+            background-color: darkkhaki;
+            width:10%;
+            height: 50vh;
+            margin: auto;
+            margin-top: 10vh;
+            text-align: center;
+        }
+
+        input{
+                border: 2px solid black;
+                border-radius: 2px;
+                padding: 10px;
+                margin: 20px;
+        }
+
+        input:hover{
+            box-shadow: 0 2px 4px 4px black;
+        }
+
+        #submit-form{
+            padding: 10px;
+            margin:20px;
+            background-color: darkcyan;  
+        }
+
+        #submit-form:hover{
+            background-color: rgb(15, 207, 207);
+            box-shadow: 0px 1px 2px 3px dodgerblue;
+            cursor: pointer;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    <h2>Static Password Protection</h2>
+    <input type="text" placeholder="Username" id="username" value=""></br></br>
+	<input type="password" placeholder="Password" id="password" value=""></br>	
+	<button onClick = "getInputValue()" id="submit-form">SUBMIT</button>
+</div>
+
+	<script>
+	
+      	function getInputValue() {
+        	let username = document.getElementById("username").value;
+        	let password = document.getElementById("password").value;
+      		console.log(username,password)	
+
+		if(username.length===0 && password.length===0)
+			alert("Username or password is missing");
+
+		else if(username.length < 8){
+			alert("Username must be atleast 8 characters long");
+		}
+
+		else if(!(/[a-zA-Z]/).test(username[0])){
+			alert("First character in username must be character");
+		}
+
+		else if(password.length < 8){
+			alert("Password must be atleast 8 characters long");
+		}
+
+		else if(username==="itshrs007" && password==="password"){
+			alert(username + " Successfully logged in !")
+		}
+
+		else{
+			alert("Username and password did not match")
+		}
+	}
+    </script>
+</body>

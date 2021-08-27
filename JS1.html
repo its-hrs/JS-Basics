@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#color1{
+			border-radius: 10px;
+			background-color: blue;
+			color: white;
+			text-shadow: black;
+			transform:rotateY(60deg);
+			clip-path: ellipse();
+		}
+
+		#color1:hover{
+			color: tomato;
+			background-color: yellow;
+			border-radius: 5px;
+		}
+	</style>
+
+	
+	<title>Font Size & Color Change</title>
+	<script type="text/javascript">
+		function change_color(){
+			document.getElementById('p1').style.color="hotpink";
+		}
+		function change_font(){
+			document.getElementById('p1').style.fontSize="50px";
+		}
+	</script>
+</head>
+
+<body>
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nihil veniam aperiam sapiente mollitia qui, quaerat voluptates quos doloribus illo ab maiores iusto dolorum ex, fugiat, numquam nam soluta voluptatemk</p>
+<label for="p1">Username
+</label>
+
+<input type="button"  name="color" id="p1" onclick="change_color()"  value="Change Color"></button>
+<input type="button"  name="30"  onclick="change_font()"  value="Incraese Font"></button>
+
+</body>
+
+</html>
