@@ -20,7 +20,7 @@ Also write validation script to check whether the input field is not blank and t
 Link: https://its-hrs.github.io/JS-Basics/JS_Prac1
 
 JS_Prac4:
-Implement a Static Password Protection.
+Implement a Static Password Protection. [Correct Username: hellouser  &  Correct Password: password]
 Link: https://its-hrs.github.io/JS-Basics/JS_Prac4
 
 JS_Prac5:
