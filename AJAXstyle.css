@@ -1,0 +1,117 @@
+
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+   
+    * {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-family: 'Ubuntu';
+      text-align: center;
+      margin-top:1px;
+      border: 2px solid olivedrab;
+      border-radius: 10px;
+      animation-name: head;
+    animation-duration: 30s;
+
+    }
+
+    h4{
+      color:goldenrod;
+      text-align: center;
+      margin-top: -10px;
+      text-shadow: 1px 1px orange;
+    }
+
+    @keyframes head {
+    0%   {background-color: cyan;}
+    20%  {background-color: yellow;}
+    40%  {background-color: blue;}
+    60% {background-color: green;}
+    80% {background-color: orange;}
+    100% {background-color: red;}
+}
+
+    .pets{
+      display:flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin: 18px 30px;
+      font-size: 1em;
+      color: white;
+      width: 92%;
+      height: 18vh;
+      align-items: center;
+      padding: 35px;
+      box-shadow: -10px 10px 15px black;
+      background-color: #002939;
+    }
+
+    #res{
+      font-family: 'Ubuntu', sans-serif;
+      margin: 18px 30px;
+      font-size: 1.5em;
+      color: #EAD7C7;
+      width: 50%;
+      height: 80vh;
+      text-align: center;
+      line-height: 170%;
+      visibility:inherit;
+    }
+
+    #hid{
+      background-color: #002939;
+      box-shadow: -10px 10px 15px black;
+      border-radius: 0px 30px;
+      padding: 15px;
+      height: 80vh;
+
+    }
+
+    #res b{
+      color: #F0B666;
+    }
+
+    #res img{
+      clip-path: circle();
+      margin-top: -5%;
+      width: 50%;
+    }
+
+    #main{
+      display:flex;
+      justify-content: space-between;
+      font-family: 'Ubuntu', sans-serif;
+      
+    }
+
+    .pets img{
+        clip-path: circle();
+        width: 23%;
+    }
+
+    .pets p {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1.2rem;
+      padding:3px;
+      color: #E4CFA9;
+      width: 35%;
+    }
+
+      button{
+        cursor:pointer;
+        border: 2px solid #04AA6D;
+        padding:10px;
+        font-size: 1rem;
+        border-radius:5px;
+        font-family: Ubuntu;
+        color:white;
+        background-color: #002939;
+      }
+
+      button:hover{
+        background-color:#04AA6D;
+        color: black;
+      }

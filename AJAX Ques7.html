@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>19011_PetForm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="AJAXstyle.css">
+</head>
+
+<body>
+    <h1>Pet Details</h1>
+   <div id="main">
+    <div id = "cont"></div>
+      
+     <div id="res"></div> 
+    </div>
+   
+  <script type="text/JavaScript">
+
+        var xhr = new XMLHttpRequest(); 
+        xhr.onload = function() { 
+          if(xhr.status === 200) { 
+            
+                  responseObject = JSON.parse(xhr.responseText);
+
+                  var newContent = ' ';
+                  for (var i = 0; i < responseObject.pets.length; i++) {
+                      newContent += '<div class="pets">';
+                      newContent += '<img src=' + responseObject.pets[i].img + ' />';
+                      newContent += '<p><b>Breed: ' + responseObject.pets[i].Breed+'</b></p>';
+                      newContent += '<button id="'+i+'">Show Details &rArr;</button>';
+                      newContent += '</div>';
+                      
+                    }
+                    document.getElementById('cont').innerHTML+=newContent;
+      }
+    };
+
+    xhr.open( 'GET', 'pet.json' , true);
+    xhr.send(null);
+    
+   
+    $( "div" ).on( "click", "button", function(e){
+        e.preventDefault();
+
+        var id = $(this).attr("id");
+        var xhr = new XMLHttpRequest(); 
+        xhr.onload = function() { 
+          if(xhr.status === 200) { 
+                  responseObject = JSON.parse(xhr.responseText);
+                  
+                  var num=id;
+                  num++;
+                  var newContent = ' ';
+                  newContent= ' <div id="hid"> ';
+                  newContent += '<h4>Pet '+ num + ' Details:</h4>';
+                  newContent += '<img src=' + responseObject.pets[id].img + ' />';
+                  newContent += '<br><b>Name :</b> ' + responseObject.pets[id].Name+'<br>';
+                  newContent += '<b>Age :</b> ' + responseObject.pets[id].Age+'<br>';
+                  newContent += '<b>Weight :</b> ' + responseObject.pets[id].Weight+'<br>';
+                  newContent += '<b>Type :</b> ' + responseObject.pets[id].Type+'<br>';
+                  newContent += '<b>Gender :</b> ' + responseObject.pets[id].Gender+'<br>';
+                  newContent += '<b>Fav :</b> ' + responseObject.pets[id].Favourite+'</b>';
+                  newContent += '</div>';
+                  document.getElementById('res').innerHTML = newContent;
+
+      }
+      }
+    xhr.open( 'GET', 'pet.json' , true);
+    xhr.send(null);
+  });
+
+</script>
+
+</body>
+</html>
