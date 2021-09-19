@@ -5,6 +5,9 @@ Note: Please add Question File name at the end of url for accessing it.
 Example: This is opened as default link -> https://its-hrs.github.io/JS-Basics/
 Now suppose if u want to see JS_Ques7 then just add 'JS_Ques7' at the end of opened link like-> https://its-hrs.github.io/JS-Basics/JS_Ques7
 
+AJAX Ques7: 
+Store JSON data of few pets that you created in previous practical in a JSON file (copy from console output of previous program to a .json file). Using AJAX, load data from the file and display it in a presentable way using HTML and CSS.
+Link: https://its-hrs.github.io/JS-Basics/AJAXQues7
 JS1: 
 Create a paragraph and 2 buttons. On the click of the first button the colour of the paragraph should change and on the click of second button font size of the paragraph should change.
 Link: https://its-hrs.github.io/JS-Basics/JS1
