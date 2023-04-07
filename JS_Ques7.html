@@ -64,7 +64,7 @@
         s = s < 10 ? "0" + s : s;
 
         var time = h + ":" + m + ":" + s + " " + session;
-        var d = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
+        var d = date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear();
 
         document.getElementById("MyClockDisplay").innerText = time;
         document.getElementById("MyClockDisplay").textContent = time;
